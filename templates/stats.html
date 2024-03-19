@@ -12,5 +12,12 @@
     <p>Goals: {{ player.goals }}</p>
     <p>Wins: {{ player.wins }}</p>
     <p>Winrate: {{ winrate }}%</p>
+    {% if player.matches < 10 %}
+        <p>Rank: Junior</p>
+    {% elif player.matches < 50 %}
+        <p>Rank: Ліга Плюща</p>
+    {% else %}
+        <p>Rank: Elite</p>
+    {% endif %}
 </body>
 </html>
